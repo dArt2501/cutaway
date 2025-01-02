@@ -1,5 +1,5 @@
 <template>
-  <div></div>
+  <div>jopa</div>
 </template>
 
 <script setup>

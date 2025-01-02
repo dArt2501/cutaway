@@ -1,7 +1,8 @@
 <template>
   <div class="base-header">
-    <RouterLink to="/" class="header__link">Обо мне</RouterLink>
-    <RouterLink to="/" class="header__link">Мои проекты</RouterLink>
+    <RouterLink to="/" class="header__link">Главная</RouterLink>
+    <RouterLink to="/about" class="header__link">Обо мне</RouterLink>
+    <RouterLink to="/projects" class="header__link">Мои проекты</RouterLink>
     <RouterLink to="/" class="header__link">Контакты</RouterLink>
   </div>
 </template>
