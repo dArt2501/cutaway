@@ -23,8 +23,11 @@ function closeDropdown() {
   background: #000;
   top: 25px;
   border: 1px solid #fff;
+  border-top: none;
   border-radius: 5px;
   overflow: hidden;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 
   .dropdown__items {
     font-size: 13px;
