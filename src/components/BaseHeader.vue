@@ -19,7 +19,6 @@ function openDropdown() {
 }
 
 function closeDropdown() {
-  console.log('fafa')
   store.commit('closeDropdown');
 }
 </script>
@@ -32,18 +31,30 @@ function closeDropdown() {
   justify-content: space-between;
   width: 100%;
   padding: 20px 50px;
-  border-bottom: 1px solid #fff;
-  border-radius: 10px;
+  box-shadow: 1px 1px 10px 1px #fff;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 
   .header__link {
+    display: flex;
+    align-items: center;
     cursor: pointer;
     position: relative;
     text-transform: uppercase;
+    height: 25px;
 
     @media(hover: hover) {
       &:hover {
         text-decoration: underline;
         text-underline-offset: 5px;
+      }
+    }
+
+    &:last-of-type {
+      @media(hover: hover) {
+        &:hover {
+          text-decoration: none;
+        }
       }
     }
   }

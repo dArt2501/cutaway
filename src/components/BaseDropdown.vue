@@ -9,7 +9,6 @@
 import store from '../store/index';
 
 function closeDropdown() {
-  console.log('fafa')
   store.commit('closeDropdown');
 }
 </script>
@@ -22,14 +21,14 @@ function closeDropdown() {
   width: 100px;
   height: auto;
   background: #000;
-  top: 20px;
+  top: 25px;
   border: 1px solid #fff;
   border-radius: 5px;
   overflow: hidden;
 
   .dropdown__items {
     font-size: 13px;
-    padding: 8px 5px;
+    padding: 8px;
     transition: .3s;
 
     @media(hover: hover) {
