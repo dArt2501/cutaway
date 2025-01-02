@@ -1,16 +1,16 @@
 <template>
   <div class="about-page">
     <h1 class="about__title">Обо мне</h1>
-    <p class="about__description">Всем привет, меня зовут Артем. Мне 14 лет, занимаюсь web-разработкой 2 года.</p>
+    <p class="about__description">{{ mockAbout.description }}</p>
     <div class="about__stack">
       <h2>Мой стек:</h2>
-      <p class="stack__items">HTML, CSS, JS, Vue/Nuxt, Vuex/Pinia, REST/SOAP, Pug/Twig, Nginx/Apache, Git, Webpack/Vite, поднимал образ с Docker, был опыт написания кода на React, Angular, Express/Nest, знаком с Linux Ubuntu</p>
+      <p class="stack__items">{{ mockAbout.stack }}</p>
     </div>
   </div>
 </template>
 
 <script setup>
-
+import mockAbout from "../../server/AboutPage.json";
 </script>
 
 <style lang="scss" scoped>
