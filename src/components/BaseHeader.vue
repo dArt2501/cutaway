@@ -1,8 +1,6 @@
 <template>
   <div class="base-header">
-    <RouterLink to="/" class="header__link">Главная</RouterLink>
-    <RouterLink to="/about" class="header__link">Обо мне</RouterLink>
-    <RouterLink to="/projects" class="header__link">Мои проекты</RouterLink>
+    <RouterLink to="/" class="header__link" v-for="item in Header.header" :key="item.link">{{ item.title }}</RouterLink>
     <div class="header__contacts-wrapper" @mouseleave="closeDropdown">
       <p class="header__link" @mouseenter="openDropdown">Контакты</p>
       <BaseDropdown v-if="store.state.isDropdownOpen"/>
@@ -15,6 +13,7 @@
 import BaseDropdown from './BaseDropdown.vue';
 import BaseBurger from './BaseBurger.vue';
 import store from '../store/index';
+import Header from "../../server/Header";
 
 function openDropdown() {
   store.commit('openDropdown')
