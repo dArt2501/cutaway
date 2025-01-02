@@ -36,11 +36,16 @@ input, textarea {
   outline: none;
 }
 
+h1, h2, h3, h4, p, a {
+  color: #fff;
+}
+
 #app {
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
   min-height: 100vh;
+  background: #000;
 }
 </style>

@@ -2,8 +2,18 @@ import { createStore } from 'vuex'
 
 export default createStore({
   state () {
-    return {}
+    return {
+      isDropdownOpen: false
+    }
   },
-  mutations: {},
+  mutations: {
+    openDropdown(state) {
+      state.isDropdownOpen = true
+    },
+
+    closeDropdown(state) {
+      state.isDropdownOpen = false
+    }
+  },
   actions: {}
 })
