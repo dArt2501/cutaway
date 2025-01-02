@@ -7,11 +7,13 @@
       <p class="header__link" @mouseenter="openDropdown">Контакты</p>
       <BaseDropdown v-if="store.state.isDropdownOpen"/>
     </div>
+    <BaseBurger/>
   </div>
 </template>
 
 <script setup>
 import BaseDropdown from './BaseDropdown.vue';
+import BaseBurger from './BaseBurger.vue';
 import store from '../store/index';
 
 function openDropdown() {
@@ -35,6 +37,11 @@ function closeDropdown() {
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
 
+  @media (max-width: 600px) {
+    justify-content: flex-start;
+    box-shadow: none;
+  }
+
   .header__link {
     display: flex;
     align-items: center;
@@ -42,6 +49,10 @@ function closeDropdown() {
     position: relative;
     text-transform: uppercase;
     height: 25px;
+
+    @media (max-width: 600px) {
+      display: none;
+    }
 
     @media(hover: hover) {
       &:hover {
