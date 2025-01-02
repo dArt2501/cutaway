@@ -1,12 +1,17 @@
 <template>
-  <Header/>
-  <RouterView />
-  <Footer/>
+  <div class="app-wrapper">
+    <Header/>
+    <RouterView/>
+    <Footer/>
+  </div>
+  <BaseAnimate/>
+
 </template>
 
 <script setup>
 import Header from './components/BaseHeader.vue';
 import Footer from './components/BaseFooter.vue';
+import BaseAnimate from './components/BaseAnimate.vue';
 </script>
 
 <style>
@@ -47,5 +52,9 @@ h1, h2, h3, h4, p, a {
   height: 100%;
   min-height: 100vh;
   background: #000;
+}
+
+.app-wrapper {
+  z-index: 1;
 }
 </style>
