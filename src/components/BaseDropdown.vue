@@ -1,5 +1,5 @@
 <template>
-  <div class="base-dropdown" v-click-outside="closeDropdown">
+  <div class="base-dropdown">
     <a href="https://t.me/Artem09za" target="_blank" class="dropdown__items" @click="closeDropdown">Telegram</a>
     <a href="mailto:artem1991v120fps@gmail.com" target="_blank" class="dropdown__items" @click="closeDropdown">Почта</a>
   </div>

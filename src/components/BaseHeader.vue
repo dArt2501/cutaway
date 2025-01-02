@@ -3,8 +3,8 @@
     <RouterLink to="/" class="header__link">Главная</RouterLink>
     <RouterLink to="/about" class="header__link">Обо мне</RouterLink>
     <RouterLink to="/projects" class="header__link">Мои проекты</RouterLink>
-    <div class="header__contacts-wrapper">
-      <p class="header__link" @click="openDropdown">Контакты</p>
+    <div class="header__contacts-wrapper" @mouseleave="closeDropdown">
+      <p class="header__link" @mouseenter="openDropdown">Контакты</p>
       <BaseDropdown v-if="store.state.isDropdownOpen"/>
     </div>
   </div>
@@ -16,6 +16,11 @@ import store from '../store/index';
 
 function openDropdown() {
   store.commit('openDropdown')
+}
+
+function closeDropdown() {
+  console.log('fafa')
+  store.commit('closeDropdown');
 }
 </script>
 
