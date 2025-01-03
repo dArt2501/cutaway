@@ -57,4 +57,23 @@ h1, h2, h3, h4, p, a {
 .app-wrapper {
   z-index: 1;
 }
+
+body {
+  overflow-y: auto;
+  --scrollbar-background: #f9fbfc;
+  --scrollbar-thumb: #000;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+  background-color: var(--scrollbar-background);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #000;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb);
+}
 </style>

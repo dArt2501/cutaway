@@ -1,7 +1,7 @@
 <template>
   <div class="base-header">
-    <RouterLink to="/" class="header__link" v-for="item in Header.header" :key="item.link">{{ item.title }}</RouterLink>
-    <div class="header__contacts-wrapper" @mouseleave="closeDropdown">
+    <RouterLink :to="item.link" class="header__link" v-for="item in Header.header" :key="item.link">{{ item.title }}</RouterLink>
+    <div class="header__contacts-wrapper">
       <p class="header__link" @mouseenter="openDropdown">Контакты</p>
       <BaseDropdown v-if="store.state.isDropdownOpen"/>
     </div>
@@ -17,10 +17,6 @@ import Header from "../../server/Header";
 
 function openDropdown() {
   store.commit('openDropdown')
-}
-
-function closeDropdown() {
-  store.commit('closeDropdown');
 }
 </script>
 
@@ -39,6 +35,7 @@ function closeDropdown() {
   @media (max-width: 600px) {
     justify-content: flex-start;
     box-shadow: none;
+    padding: 20px;
   }
 
   .header__link {

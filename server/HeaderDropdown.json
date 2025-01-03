@@ -1,0 +1,16 @@
+{
+  "headerDropdown": {
+    "Telegram": {
+      "title": "Telegram",
+      "link": "https://t.me/Artem09za"
+    },
+    "Почта": {
+      "title": "Почта",
+      "link": "mailto:artem1991v120fps@gmail.com"
+    },
+    "VK": {
+      "title": "VK",
+      "link": "https://vk.com/im?sel=689762890"
+    }
+  }
+}
